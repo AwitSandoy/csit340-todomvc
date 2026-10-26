@@ -27,6 +27,10 @@ function Todos() {
         setTodos(todos.filter((todo) => todo.id !== id))
     }
 
+    const itemsLeft = todos.filter((todo) => !todo.completed).length
+
+    const itemsLeftText = itemsLeft === 1 ? 'item left' : 'items left'
+
     return (
         <section className="mx-auto max-w-[550px]">
             <h1 className="text-center text-[80px] font-extralight text-[#b83f45]">
